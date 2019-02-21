@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    should_send_contact_email:
+        label: nathan.contact::lang.models.settings.should_send_contact_email
+        type: switch
+
+    contact_email:
+        label: nathan.contact::lang.models.settings.contact_email

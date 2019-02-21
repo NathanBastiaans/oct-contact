@@ -1,0 +1,51 @@
+<form id="contact-form"
+      method="post"
+      data-request="onSubmit"
+      data-request-validate
+      data-request-flash
+      data-request-success="$('#contact-form')[0].reset()">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="md-form mb-0">
+                <input name="name" type="text" id="form-contact-name" class="form-control" autocomplete="off">
+                <label for="form-contact-name" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.name' | trans }} *</label>
+
+                <div data-validate-for="name"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="md-form mb-0">
+                <input name="phone_number" type="tel" id="form-contact-phone-number" class="form-control" autocomplete="off">
+                <label for="form-contact-phone-number" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.phone_number' | trans }} *</label>
+
+                <div data-validate-for="phone_number"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="md-form mb-0">
+                <input name="email_address" type="email" id="form-contact-email" class="form-control" autocomplete="off">
+                <label for="form-contact-email" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.email_address' | trans }} *</label>
+
+                <div data-validate-for="email_address"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="md-form mb-0">
+                <textarea name="comment"  id="form-contact-comment" class="form-control md-textarea" rows="3"></textarea>
+                <label for="form-contact-comment" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.comment' | trans }} *</label>
+
+                <div data-validate-for="comment"></div>
+
+                <button type="submit" class="btn btn-lg btn-primary waves-effect text-white waves-light" data-attach-loading>
+                    <i class="fa fa-send-o"></i>
+                    {{ 'nathan.contact::lang.components.contactForm.front_end.submit' | trans }}
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

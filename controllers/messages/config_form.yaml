@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/nathan/contact/models/message/fields.yaml
+
+# Model Class name
+modelClass: Nathan\Contact\Models\Message
+
+# Default redirect location
+defaultRedirect: nathan/contact/messages
+
+# Create page
+create:
+    title: Create Message
+    redirect: nathan/contact/messages/update/:id
+    redirectClose: nathan/contact/messages
+
+# Update page
+update:
+    title: Edit Message
+    redirect: nathan/contact/messages
+    redirectClose: nathan/contact/messages
+
+# Preview page
+preview:
+    title: Preview Message

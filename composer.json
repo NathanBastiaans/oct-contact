@@ -1,0 +1,19 @@
+{
+  "name": "nathan/contact",
+  "type": "october-plugin",
+  "description": "Contact plug-in for October CMS",
+  "homepage": "https://nathanbastiaans.nl",
+  "keywords": ["october", "octobercms", "contact"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nathan Bastiaans",
+      "email": "contact@nathanbastiaans.nl"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.0"
+  },
+  "minimum-stability": "dev"
+}
