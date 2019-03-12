@@ -12,7 +12,7 @@ modelClass: Nathan\Contact\Models\Message
 title: Manage Messages
 
 # Link URL for each record
-recordUrl: nathan/contact/messages/update/:id
+recordUrl: nathan/contact/messages/preview/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
@@ -30,9 +30,9 @@ showSetup: true
 showSorting: true
 
 # Default sorting column
-# defaultSort:
-#     column: created_at
-#     direction: desc
+defaultSort:
+    column: created_at
+    direction: desc
 
 # Display checkboxes next to each record
 showCheckboxes: true

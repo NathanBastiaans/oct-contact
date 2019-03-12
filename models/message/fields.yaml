@@ -5,13 +5,17 @@
 fields:
     name:
         label: nathan.contact::lang.models.message.name
-
-    email_address:
-        label: nathan.contact::lang.models.message.email_address
-
-    phone_number:
-        label: nathan.contact::lang.models.message.phone_number
+        span: left
 
     comment:
         label: nathan.contact::lang.models.message.comment
         type: textarea
+        span: right
+
+    email_address:
+        label: nathan.contact::lang.models.message.email_address
+        span: left
+
+    phone_number:
+        label: nathan.contact::lang.models.message.phone_number
+        span: left
