@@ -4,7 +4,7 @@
 
 columns:
     id:
-        label: label: nathan.contact::lang.models.message.id
+        label: nathan.contact::lang.models.message.id
         searchable: true
 
     name:
