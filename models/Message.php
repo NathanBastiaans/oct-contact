@@ -34,10 +34,10 @@ class Message extends Model
      * @var array
      */
     public $attributeNames = [
-        'name'          => 'nathan.contact::lang.models.message.name.label',
-        'email_address' => 'nathan.contact::lang.models.message.email_address.label',
-        'phone_number'  => 'nathan.contact::lang.models.message.phone_number.label',
-        'comment'       => 'nathan.contact::lang.models.message.comment.label',
+        'name'          => 'nathan.contact::lang.models.message.name',
+        'email_address' => 'nathan.contact::lang.models.message.email_address',
+        'phone_number'  => 'nathan.contact::lang.models.message.phone_number',
+        'comment'       => 'nathan.contact::lang.models.message.comment',
     ];
 
     /**

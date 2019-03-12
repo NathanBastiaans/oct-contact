@@ -1,46 +1,55 @@
 <form id="contact-form"
       method="post"
-      data-request="onSubmit"
+      data-request="onContactSubmit"
       data-request-validate
       data-request-flash
+      novalidate
       data-request-success="$('#contact-form')[0].reset()">
 
     <div class="row">
         <div class="col-md-12">
-            <div class="md-form mb-0">
-                <input name="name" type="text" id="form-contact-name" class="form-control" autocomplete="off">
-                <label for="form-contact-name" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.name' | trans }} *</label>
+                <div class="form-group">
+                    <label for="form-contact-name" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.name' | trans }} *</label>
+                    <input name="name" type="text" id="form-contact-name" class="form-control" autocomplete="off">
 
-                <div data-validate-for="name"></div>
-            </div>
+                    <div data-validate-for="name" class="form-feedback"></div>
+                </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-6">
-            <div class="md-form mb-0">
-                <input name="phone_number" type="tel" id="form-contact-phone-number" class="form-control" autocomplete="off">
+            <div class="form-group">
                 <label for="form-contact-phone-number" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.phone_number' | trans }} *</label>
+                <input name="phone_number" type="tel" id="form-contact-phone-number" class="form-control" autocomplete="off">
 
-                <div data-validate-for="phone_number"></div>
+                <div data-validate-for="phone_number" class="form-feedback"></div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="md-form mb-0">
-                <input name="email_address" type="email" id="form-contact-email" class="form-control" autocomplete="off">
+            <div class="form-group">
                 <label for="form-contact-email" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.email_address' | trans }} *</label>
+                <input name="email_address" type="email" id="form-contact-email" class="form-control" autocomplete="off">
 
-                <div data-validate-for="email_address"></div>
+                <div data-validate-for="email_address" class="form-feedback"></div>
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-12">
-            <div class="md-form mb-0">
-                <textarea name="comment"  id="form-contact-comment" class="form-control md-textarea" rows="3"></textarea>
+            <div class="form-group">
                 <label for="form-contact-comment" class="">{{ 'nathan.contact::lang.components.contactForm.front_end.comment' | trans }} *</label>
+                <textarea name="comment"  id="form-contact-comment" class="form-control md-textarea" rows="3"></textarea>
 
-                <div data-validate-for="comment"></div>
+                <div data-validate-for="comment" class="form-feedback"></div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
                 <button type="submit" class="btn btn-lg btn-primary waves-effect text-white waves-light" data-attach-loading>
                     <i class="fa fa-send-o"></i>
                     {{ 'nathan.contact::lang.components.contactForm.front_end.submit' | trans }}

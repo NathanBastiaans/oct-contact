@@ -1,4 +1,12 @@
-<?php namespace Nathan\Contact\Components;
+<?php
+/**
+ * The contact form component file
+ *
+ * @package    Nathan.Contact
+ * @license    https://choosealicense.com/licenses/mit/ MIT License
+ * @author     Nathan Bastiaans <contact@nathanbastiaans.nl>
+ */
+namespace Nathan\Contact\Components;
 
 use Backend\Helpers\Backend;
 use Cms\Classes\ComponentBase;
@@ -7,8 +15,20 @@ use Nathan\Contact\Models\Message;
 use Nathan\Contact\Models\Settings;
 use October\Rain\Support\Facades\Flash;
 
+/**
+ * The contact form component
+ *
+ * @package    Nathan.Contact
+ * @license    https://choosealicense.com/licenses/mit/ MIT License
+ * @author     Nathan Bastiaans <contact@nathanbastiaans.nl>
+ */
 class ContactForm extends ComponentBase
 {
+    /**
+     * Register the component details
+     *
+     * @return array
+     */
     public function componentDetails()
     {
         return [
@@ -17,9 +37,23 @@ class ContactForm extends ComponentBase
         ];
     }
 
+    /**
+     * This fires on the pageload
+     *
+     * @return void
+     */
+    public function onRun()
+    {
+        // Include the main JS file
+        $this->addJs(['assets/js/main.js']);
+    }
+
+    /**
+     * AJAX handler for contact form submits
+     */
     public function onContactSubmit()
     {
-        // Validation handled in the front-end
+        // Validation is also handled in the front-end
         $message = new Message();
         $message->fill(post());
         $message->save();
