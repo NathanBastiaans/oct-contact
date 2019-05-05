@@ -64,7 +64,7 @@ class ContactForm extends ComponentBase
                 'url'     => Backend::url('nathan/messages/messages/update/' . $message->id),
             ];
 
-            Mail::send('nathan.contact::views.mail.message_sent', $data, function ($mail) {
+            Mail::send('nathan.contact::mail.message_sent', $data, function ($mail) {
                 $mail->to(Settings::get('contact_email'));
             });
         }
