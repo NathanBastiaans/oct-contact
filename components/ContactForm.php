@@ -8,7 +8,7 @@
  */
 namespace Nathan\Contact\Components;
 
-use Backend\Helpers\Backend;
+use Backend;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Mail;
 use Nathan\Contact\Models\Message;
@@ -61,10 +61,10 @@ class ContactForm extends ComponentBase
         if (Settings::get('should_send_contact_email')) {
             $data = [
                 'message' => $message,
-                'url'     => Backend::url('nathan/messages/messages/update/' . $message->id),
+                'url'     => Backend::url('nathan/contact/messages/update/' . $message->id),
             ];
 
-            Mail::send('nathan.contact::views.mail.message_sent', $data, function ($mail) {
+            Mail::send('nathan.contact::mail.message_sent', $data, function ($mail) {
                 $mail->to(Settings::get('contact_email'));
             });
         }
