@@ -61,7 +61,7 @@ class ContactForm extends ComponentBase
         if (Settings::get('should_send_contact_email')) {
             $data = [
                 'message' => $message,
-                'url'     => Backend::url('nathan/messages/messages/update/' . $message->id),
+                'url'     => Backend::url('nathan/contact/messages/update/' . $message->id),
             ];
 
             Mail::send('nathan.contact::mail.message_sent', $data, function ($mail) {
