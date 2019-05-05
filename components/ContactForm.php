@@ -8,7 +8,7 @@
  */
 namespace Nathan\Contact\Components;
 
-use Backend\Helpers\Backend;
+use Backend;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Mail;
 use Nathan\Contact\Models\Message;
